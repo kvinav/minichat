@@ -14,8 +14,8 @@ class ManagerMessages
   {
     $req = $this->bdd->prepare('INSERT INTO minichat (pseudo, message, date_message) VALUES(:pseudo, :message, NOW())');
 
-    $req->bindValue(':pseudo', $pseudo->pseudo());
-    $req->bindValue(':message', $message->message());
+    $req->bindValue(':pseudo', $messages->getPseudo());
+    $req->bindValue(':message', $messages->getMessage());
     $req->execute();
   }
 
