@@ -11,7 +11,7 @@ class Messages
 
    public function __construct($valeurs = [])
   {
-    if (!empty($valeurs)) 
+    if (!empty($valeurs)) // Si on a spécifié des valeurs, alors on hydrate l'objet.
     {
       $this->hydrate($valeurs);
     }
@@ -54,12 +54,9 @@ class Messages
 	//récupération date_message
 	public function setDateMessage($date_message)
 	{
-
-		if (is_numeric($date_message))
-		{
+		
 		$this->date_message = $date_message;
-		}
-
+		
 	}
 
 	public function getDateMessage($date_message)
