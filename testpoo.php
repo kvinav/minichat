@@ -14,4 +14,4 @@ $messages = new Messages([
 $bdd = new PDO('mysql:host=localhost;dbname=test', 'root', '');
 $manager = new ManagerMessages($bdd);
     
-$manager->add($msg);
+$manager->add($messages);
