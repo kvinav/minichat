@@ -15,11 +15,13 @@ class ManagerMessages
 
   public function add(Messages $messages)
   {
+    
     $req = $this->bdd->prepare('INSERT INTO minichat (pseudo, message, date_message) VALUES(:pseudo, :message, NOW())');
 
-    $req->bindValue(':pseudo', $messages->getPseudo(''), PDO::PARAM_INT);
-    $req->bindValue(':message', $messages->getMessage(''), PDO::PARAM_INT);
+    $req->bindValue(':pseudo', $_POST['pseudo'], PDO::PARAM_INT);
+    $req->bindValue(':message', $_POST['message'], PDO::PARAM_INT);
     $req->execute();
+  
   }
 
 

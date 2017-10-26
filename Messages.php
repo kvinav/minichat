@@ -46,20 +46,20 @@ class Messages
 			}
 	}
 
-	public function getId($id)
+	public function getId()
 	{
 		return $this->id;
 
 	}
 	//récupération date_message
-	public function setDateMessage($date_message)
+	public function setDatemessage($date_message)
 	{
 		
 		$this->date_message = $date_message;
 		
 	}
 
-	public function getDateMessage($date_message)
+	public function getDatemessage()
 	{
 		return $this->$date_message;
 
@@ -76,7 +76,7 @@ class Messages
 
 	}
 
-	public function getPseudo($pseudo)
+	public function getPseudo()
 	{
 		return $this->pseudo;
 
@@ -91,7 +91,7 @@ class Messages
 		}
 	}
 
-	public function getMessage($message)
+	public function getMessage()
 	{
 		return $this->message;
 
